@@ -23,6 +23,7 @@ for i in cur:
 print('Content-Type: text/html')
 print('')
 print('<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">')
+
 print('<link rel="stylesheet" href="/CollarBone/css/registro_usr.css">')
 print('<div class="card"> <h5 class="card-header"><i>Collarbone</i></h5> <div class="card-body">')
 
@@ -37,10 +38,6 @@ else:
     print('<div id = "contbtna"><a href="/CollarBone/InicioSesion.html" class="badge badge-dark"> Inisiar Sesion</a></div>')
 print('</div></div>')
 cnx.close()
-
-
-
-
 
 
 

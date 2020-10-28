@@ -37,7 +37,7 @@ print('            <h1><a href="/CollarBone/index.html" id="name">Collarbone</a>
 print('        </div>')
 print('        <div id="box3">')
 print('            <ul id="menu">')
-print('                <li><a href="/CollarBone/index.html">Inicio</a></li>')
+print('                <li><a href="#">Inicio</a></li>')
 print('                <li><a href="#">Categorias</a></li>')
 print('                <li><a href="/CollarBone/InicioSesion.html">Ingresar</a></li>')
 print('                <li><a href="/CollarBone/registro_usr.html">Registrarse</a></li>')

@@ -22,7 +22,7 @@ print('<head>')
 print('    <meta charset="UTF-8">')
 print('    <meta name="viewport" content="width=device-width, initial-scale=1.0">')
 print('    <meta http-equiv="X-UA-Compatible" content="ie=edge">')
-print('    <link rel="shortcut icon" type="image/x-icon" href="/CollarBoneimg/skull.ico">')
+print('    <link rel="shortcut icon" type="image/x-icon" href="/CollarBone/img/skull.ico">')
 print('    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">')
 print('    <link rel="stylesheet" href="/CollarBone/css/menu.css" />')
 print('    <link rel="stylesheet" href="/CollarBone/css/estilos.css" />')
@@ -60,7 +60,7 @@ print('    <div id="box4" margin="auto">')
 print('        <table class="galeria">')
 
 cont = 0
-for row in camisetas:
+for row in reversed(camisetas):
     cont+=1
     if(cont == 1):
         print('<tr>')
@@ -85,7 +85,7 @@ print('                        <a target="_blanck" href="https://www.facebook.co
 print('                         <label>Siguenos en Facebook</label>')
 print('                     </div>')
 print('                     <div class="row">')
-print('                        <a target="_blanck" href="https://twitter.com/Collarb40200108"><src="/CollarBone/img/LogoTW.png"></a>')
+print('                        <a target="_blanck" href="https://twitter.com/Collarb40200108"><img src="/CollarBone/img/LogoTW.png"></a>')
 print('                         <label>Siguenos en Twitter</label>')
 print('                     </div>')
 print('                     <div class="row">')

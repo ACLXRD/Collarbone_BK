@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-import hashlib
-import base64
 import mysql.connector
 import cgi
 
@@ -13,10 +11,10 @@ TallasDisponibles = data.getvalue('TallasDisponibles')
 PrecioCamiseta = data.getvalue('PrecioCamiseta')
 ImagenCamiseta = data.getvalue('ImagenCamiseta')
 
-cnx = mysql.connector.connect (user='root', password = '1234', database='Collarbone', host='127.0.0.1')
+cnx = mysql.connector.connect (user='aclr', password = '1010029624', database='Collarbone', host='127.0.0.1')
 cur = cnx.cursor()
 
-cur.execute('select NombreCamiseta from camisetas')
+cur.execute('select Nombre from camisetas')
 tem = True
 
 for i in cur:

@@ -41,8 +41,8 @@ if(admin):
     print('<script> location.href="/CollarBone/administracion.html";</script>')
 elif (usrcheck):
     print('<h7> Bienvenido de nuevo <b>{}</b> a <i>Collarbone.</i></h7>'.format(nombre))
-    print('<a href="/CollarBone/index.html" id = "btna"  class="badge badge-dark"> Ver camisetas!</a>')
-    print('<script> location.href="/CollarBone/intodex.html;</script>')
+    print('<a href="/CollarBone/intodex.html" id = "btna"  class="badge badge-dark"> Ver camisetas!</a>')
+    print('<script> location.href="/CollarBone/intodex.html";</script>')
 else:
     print('<h7>El correo o el password  ingresados no existen.</h7>')
     print('<div id = "contbtna">Deseas <a href="/CollarBone/registro_usr.html" class="badge badge-dark"> ¿Registrarse?</a></div>')

@@ -31,7 +31,7 @@ if (tem):
     cur.execute(sql)
     cnx.commit()
     print('<h7> Bienvenido <b>{}</b> ya eres parte de  <i>Collarbone.</i></h7>'.format(nombre))
-    print('<div id = "contbtna"><a href="/CollarBone/index.html" id = "btna" class="badge badge-dark"> Ver camisetas!</a></div>')
+    print('<div id = "contbtna"><a href="/CollarBone/intodex.html" id = "btna" class="badge badge-dark"> Ver camisetas!</a></div>')
     print('<script> location.href="/CollarBone/intodex.html";</script>')
 else:
     print('<h7>El correo ingresado ya esta registrado.</h7>')

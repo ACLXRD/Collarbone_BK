@@ -30,8 +30,9 @@ if (tem):
     sql = ("insert into usuarios values ('{}','{}','{}',SHA({}));".format(nombre,apellido,correo,password))
     cur.execute(sql)
     cnx.commit()
-    print('<h7> Bienvenido <b>{}</b> ya eres parte de  <i>Collarbone.</i></h7>'.format(nombre))
-    print('<div id = "contbtna"><a href="/CollarBone/index.html" id = "btna" class="badge badge-dark"> Ver camisetas!</a></div>')
+    print('<script> location.href="/CollarBone/intodex.html";</script>')
+    # print('<h7> Bienvenido <b>{}</b> ya eres parte de  <i>Collarbone.</i></h7>'.format(nombre))
+    # print('<div id = "contbtna"><a href="/CollarBone/index.html" id = "btna" class="badge badge-dark"> Ver camisetas!</a></div>')
 else:
     print('<h7>El correo ingresado ya esta registrado.</h7>')
     print('<div id = "contbtna"><a href="/CollarBone/InicioSesion.html" class="badge badge-dark"> Inisiar Sesion</a></div>')

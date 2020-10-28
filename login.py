@@ -36,11 +36,13 @@ print('<link rel="stylesheet" href="/CollarBone/css/registro_usr.css">')
 print('<div class="card"> <h5 class="card-header"><i>Collarbone</i></h5> <div class="card-body">')
 
 if(admin):
-    print('<h7> Bienvenido de nuevo <b>Admin. {}</b> a <i>Collarbone.</i></h7>'.format(nombre))
-    print('<div id = "contbtna"><a href="/CollarBone/administracion.html" id = "btna"  class="badge badge-dark">Vamos!</a></div>')
+    print('<script> location.href="/CollarBone/administracion.html";</script>')
+    # print('<h7> Bienvenido de nuevo <b>Admin. {}</b> a <i>Collarbone.</i></h7>'.format(nombre))
+    # print('<div id = "contbtna"><a href="/CollarBone/administracion.html" id = "btna"  class="badge badge-dark">Vamos!</a></div>')
 elif (usrcheck):
-    print('<h7> Bienvenido de nuevo <b>{}</b> a <i>Collarbone.</i></h7>'.format(nombre))
-    print('<a href="/CollarBone/index.html" id = "btna"  class="badge badge-dark"> Ver camisetas!</a>')
+    print('<script> location.href="/CollarBone/intodex.html;</script>')
+    # print('<h7> Bienvenido de nuevo <b>{}</b> a <i>Collarbone.</i></h7>'.format(nombre))
+    # print('<a href="/CollarBone/index.html" id = "btna"  class="badge badge-dark"> Ver camisetas!</a>')
 else:
     print('<h7>El correo o el password  ingresados no existen.</h7>')
     print('<div id = "contbtna">Deseas <a href="/CollarBone/registro_usr.html" class="badge badge-dark"> ¿Registrarse?</a></div>')

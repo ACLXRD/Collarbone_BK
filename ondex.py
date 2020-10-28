@@ -14,7 +14,7 @@ sql = ("select URLImagen from camisetas")
 cur.execute(sql)
 camisetas = cur.fetchall()
   
-print('Content-Type: text/html; charset=utf-8\n\r' )
+print('Content-Type: text/html')
 print('')
 print('<!DOCTYPE html>')
 print('<html lang="en">')

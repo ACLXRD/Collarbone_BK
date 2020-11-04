@@ -36,7 +36,7 @@ if (tem):
     sql = ("insert into camisetas values ('{}',{},'{}',{},'{}')".format(NombreCamiseta,NumeroCamisetasDisponibles,TallasDisponibles,PrecioCamiseta,ImagenCamiseta))
     cur.execute(sql)
     cnx.commit()
-    print('<h7> Creacion Exitosa. La camiseta <b>{}</b> ya se encuentra en el inventario y página de <i> Collarbone.</i></h7>'.format(NombreCamiseta))
+    print('<h7>La camiseta <b>{}</b> ha sido creada exitosamente. Se encuentra en el inventario y página de <i> Collarbone.</i></h7>'.format(NombreCamiseta))
     print('<div id = "contbtna"><a href="/CollarBone/administracion.html" id = "btna" class="badge badge-dark">Regresar</a></div>')
 else:
     #Aviso en pantalla si la camiseta ya existe

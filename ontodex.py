@@ -1,7 +1,9 @@
 #!/usr/bin/python3
+#Mismo código que ondex.html, pero cambia el menú del forntend porque esta es la página que se despliega para cuando se inicia sesión
 import mysql.connector
 import cgi 
 
+# Se establece conexión con la BD
 cnx = mysql.connector.connect (user='aclr', password = '1010029624', database='Collarbone', host='127.0.0.1')
 cur = cnx.cursor()
 cnx.commit()
@@ -10,10 +12,12 @@ cnx.commit()
 # # cur.execute(sql)
 # nrows = cur.execute(sql);
 
+#Sentencia SQL para traer todas las camisetas
 sql = ("select URLImagen from camisetas")
 cur.execute(sql)
 camisetas = cur.fetchall()
   
+#Codigo HTML para ver la galeraia actualizada 
 print('Content-Type: text/html' )
 print('')
 print('<!DOCTYPE html>')
@@ -59,6 +63,8 @@ print('    </div>')
 print('    <div id="box4" margin="auto">')
 print('        <table class="galeria">')
 
+
+#Bulce para mostrar  todas las camisetas almacenadas en la base de datos
 cont = 0
 for row in reversed(camisetas):
     cont+=1

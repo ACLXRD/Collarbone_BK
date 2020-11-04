@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+#Codigo para probar la conexión con la base de datos
 import mysql.connector
 from mysql.connector import errorcode
 try:

@@ -1,22 +1,27 @@
 #!/usr/bin/python3
+#Dependencias utilizadas
 import mysql.connector
 import cgi 
 
+#Se extablece conexión con la base de datos
 cnx = mysql.connector.connect (user='aclr', password = '1010029624', database='Collarbone', host='127.0.0.1')
 cur = cnx.cursor()
 cnx.commit()
 
+#Sentencia SQL para la consulta de una camiseta.
 sql = ("select * from camisetas where imagen = 'https://www.mattelsa.net/media/catalog/product/cache/1/small_image/657x/17f82f742ffe127f42dca9de82fb58b1/5/1/51797-1.jpg';")
 cur.execute(sql)
 find = cur.fetchall()
 nombre = ""
 imagen = ""
 des = ""
+#Se ectra cada dato de la consulta SQL
 for row in find:
     nombre = row[0]
     des = row[1]
     imagen = row[2] 
 
+#Codigo HTML 
 print('Content-Type: text/html')
 print('')
 print('<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">')

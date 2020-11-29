@@ -18,7 +18,10 @@ def productos():
     sql = "select * from camisetas;"
     cur.execute(sql)
     camisetas = cur.fetchall()
-    return camisetas
+    print(camisetas)
+    if camisetas:
+        return "Consulta exitosa"
+    return "Fallo en consulta"
 
 @app.route('/CrearC', methods=['POST'])
 def crear():

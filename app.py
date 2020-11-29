@@ -1,4 +1,5 @@
-from flask import Flask
+from flask import Flask, jsonify, request
+import json
 from flask_cors import CORS
 import mysql.connector
 
@@ -17,14 +18,15 @@ def hellos():
     return "hello"
 
 @app.route('/BuscarC', methods=['GET'])
-def productos():
-    
+def productos(): 
     sql = "select * from camisetas;"
     cur.execute(sql)
     camisetas = cur.fetchall()
     print(camisetas)
+    listac = list()
     if camisetas:
-        return "Consulta exitosa:\n {}".format(camisetas)
+        listac.append(camisetas)
+        return jsonify(data=listac)
     return "Fallo en consulta"
 
 @app.route('/CrearC', methods=['POST'])

@@ -8,6 +8,7 @@ cnx.commit()
 
 
 app = Flask (__name__)
+cors = CORS(app, resources={r'/': {'origins': ''}})
 
 @app.route('/')
 def hellos():
@@ -15,12 +16,13 @@ def hellos():
 
 @app.route('/BuscarC', methods=['GET'])
 def productos():
+    
     sql = "select * from camisetas;"
     cur.execute(sql)
     camisetas = cur.fetchall()
     print(camisetas)
     if camisetas:
-        return "Consulta exitosa {}".format(camisetas)
+        return "Consulta exitosa:\n {}".format(camisetas)
     return "Fallo en consulta"
 
 @app.route('/CrearC', methods=['POST'])

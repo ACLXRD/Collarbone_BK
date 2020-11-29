@@ -20,7 +20,7 @@ def productos():
     camisetas = cur.fetchall()
     print(camisetas)
     if camisetas:
-        return "Consulta exitosa"
+        return "Consulta exitosa {}".format(camisetas)
     return "Fallo en consulta"
 
 @app.route('/CrearC', methods=['POST'])

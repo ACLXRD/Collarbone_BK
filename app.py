@@ -8,10 +8,10 @@ cnx = mysql.connector.connect (user='aclr', password = '1010029624', database='C
 cur = cnx.cursor()
 cnx.commit()
 
-
+DEBUG = True
 app = Flask (__name__)
 app.config.from_object(__name__)
-CORS(app, resources={r'/': {'origins': ''}})
+CORS(app, resources={r'/*': {'origins': '*'}})
 
 @app.route('/')
 def hellos():

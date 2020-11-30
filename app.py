@@ -3,11 +3,6 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 import mysql.connector
-import cgi
-
-data = cgi.FieldStorage()
-borrarC = data.getvalue('borrarC')
-print(borrarC)
 
 # Se establece conexión con la BD
 cnx = mysql.connector.connect (user='aclr', password = '1010029624', database='Collarbone', host='127.0.0.1')
@@ -54,6 +49,7 @@ def actualizar():
 def borrar():
     data = request.get_json(force=True)
     sup = data.get('supC')
+    print(sup)
     sql = "delete from camisetas WHERE (Nombre = '{}');".format(sup)
     cur.execute(sql)
     return "Camiseta eliminada"

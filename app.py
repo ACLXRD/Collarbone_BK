@@ -3,6 +3,13 @@ from flask_cors import CORS
 import mysql.connector
 import cgi
 
+data = cgi.FieldStorage()
+nombreC = data.getvalue('nombreCx')
+if (nombreC):
+    print(nombreC)
+else:
+    nombreC = "Worlds Parallels"
+
 # Se establece conexión con la BD
 cnx = mysql.connector.connect (user='aclr', password = '1010029624', database='Collarbone', host='127.0.0.1')
 cur = cnx.cursor()
@@ -12,13 +19,6 @@ DEBUG = True
 app = Flask (__name__)
 app.config.from_object(__name__)
 CORS(app, resources={r'/*': {'origins': '*'}})
-
-data = cgi.FieldStorage()
-nombreC = data.getvalue('nombreCx')
-if (nombreC):
-    print(nombreC)
-else:
-    nombreC = "Worlds Parallels"
 
 print('Content-Type: text/html')
 print('')

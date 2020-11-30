@@ -42,7 +42,7 @@ def productos():
 @app.route('/BuscarCone', methods=['GET'])
 def producto(): 
     print(nombreC)
-    sql = "select * from camisetas where Nombre = '{}';".format(nombreC)
+    sql = "select * from camisetas where Nombre = 'Worlds Parallels';"
     cur.execute(sql)
     camisetas = cur.fetchall()
     print(camisetas)

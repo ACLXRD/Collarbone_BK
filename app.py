@@ -1,4 +1,4 @@
-#!/usr/bin/python3 -w
+#!/usr/bin/python3
 
 from flask import Flask, jsonify, request
 from flask_cors import CORS
@@ -7,7 +7,7 @@ import cgi
 
 data = cgi.FieldStorage()
 nombreC = data.getvalue('nombreCx')
-# nombreC = "Worlds Parallels"
+print(nombreC)
 
 # Se establece conexión con la BD
 cnx = mysql.connector.connect (user='aclr', password = '1010029624', database='Collarbone', host='127.0.0.1')
@@ -44,7 +44,6 @@ def productos():
 
 @app.route('/BuscarCone', methods=['GET'])
 def producto(): 
-    print(nombreC)
     sql = "select * from camisetas where Nombre = '{}';".format(nombreC)
     cur.execute(sql)
     camisetas = cur.fetchall()

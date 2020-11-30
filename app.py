@@ -14,10 +14,11 @@ app.config.from_object(__name__)
 CORS(app, resources={r'/*': {'origins': '*'}})
 
 data = cgi.FieldStorage()
-nombreC = "Worlds Parallels"
-print(nombreC)
 nombreC = data.getvalue('nombreCx')
-print(nombreC)
+if (nombreC):
+    print(nombreC)
+else:
+    nombreC = "Worlds Parallels"
 
 @app.route('/')
 def hellos():

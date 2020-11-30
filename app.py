@@ -47,6 +47,7 @@ def actualizar():
 
 @app.route('/BorrarC', methods=['DELETE'])
 def borrar():
+    print("1")
     data = request.get_json(force=True)
     sup = data.get('supC')
     print(sup)

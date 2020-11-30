@@ -57,7 +57,6 @@ def borrar():
     sql = "delete from camisetas WHERE (Nombre = '{}');".format(sup)
     cur.execute(sql)
     return "Camiseta eliminada"
-CORS(app)
 
 if __name__  == "__main__":
     app.run(host='0.0.0.0')

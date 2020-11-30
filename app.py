@@ -1,7 +1,10 @@
 from flask import Flask, jsonify, request
-import json
 from flask_cors import CORS
 import mysql.connector
+import cgi
+
+data = cgi.FieldStorage()
+nombreC = data.getvalue('nombreC')
 
 # Se establece conexión con la BD
 cnx = mysql.connector.connect (user='aclr', password = '1010029624', database='Collarbone', host='127.0.0.1')
@@ -20,6 +23,25 @@ def hellos():
 @app.route('/BuscarC', methods=['GET'])
 def productos(): 
     sql = "select * from camisetas;"
+    cur.execute(sql)
+    camisetas = cur.fetchall()
+    print(camisetas)
+    listac = list()
+    if camisetas:
+        for i in camisetas:
+            nombre = i[0]
+            cantidad = i[1]
+            tallas = i[2]
+            precio = i[3]
+            url = i[4]
+            camiseta = {"nombre": nombre, 'cantidad': cantidad, 'tallas': tallas, 'precio':precio, 'url':url}
+            listac.append(camiseta)
+        return jsonify(data=listac)
+    return "Fallo en consulta"
+
+@app.route('/BuscarC{}'.format(nombreC), methods=['GET'])
+def producto(): 
+    sql = "select * from camisetas where Nombre = '{}';".format(nombreC)
     cur.execute(sql)
     camisetas = cur.fetchall()
     print(camisetas)

@@ -1,3 +1,5 @@
+#!/usr/bin/python3 -w
+
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 import mysql.connector
@@ -5,6 +7,7 @@ import cgi
 
 data = cgi.FieldStorage()
 nombreC = data.getvalue('nombreCx')
+
 if (nombreC):
     print(nombreC)
 else:
@@ -19,9 +22,6 @@ DEBUG = True
 app = Flask (__name__)
 app.config.from_object(__name__)
 CORS(app, resources={r'/*': {'origins': '*'}})
-
-print('Content-Type: text/html')
-print('')
 
 @app.route('/')
 def hellos():

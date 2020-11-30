@@ -5,7 +5,7 @@ import cgi
 
 data = cgi.FieldStorage()
 nombreC = data.getvalue('nombreC')
-
+print(nombreC)
 # Se establece conexión con la BD
 cnx = mysql.connector.connect (user='aclr', password = '1010029624', database='Collarbone', host='127.0.0.1')
 cur = cnx.cursor()

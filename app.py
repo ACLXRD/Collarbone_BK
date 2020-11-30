@@ -25,7 +25,14 @@ def productos():
     print(camisetas)
     listac = list()
     if camisetas:
-        listac.append(camisetas)
+        for i in camisetas:
+            nombre = i[0]
+            cantidad = i[1]
+            tallas = i[2]
+            precio = i[3]
+            url = i[4]
+            camiseta = {"nombre": nombre, 'cantidad': cantidad, 'tallas': tallas, 'precio':precio, 'url':url}
+            listac.append(camiseta)
         return jsonify(data=listac)
     return "Fallo en consulta"
 

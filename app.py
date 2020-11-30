@@ -15,6 +15,7 @@ CORS(app, resources={r'/*': {'origins': '*'}})
 
 data = cgi.FieldStorage()
 nombreC = data.getvalue('nombreCx')
+print(nombreC)
 
 @app.route('/')
 def hellos():

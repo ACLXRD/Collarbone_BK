@@ -20,6 +20,9 @@ if (nombreC):
 else:
     nombreC = "Worlds Parallels"
 
+print('Content-Type: text/html')
+print('')
+
 @app.route('/')
 def hellos():
     return "hello"

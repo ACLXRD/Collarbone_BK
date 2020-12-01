@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 import mysql.connector
@@ -46,10 +47,14 @@ def actualizar():
 
 @app.route('/BorrarC', methods=['DELETE'])
 def borrar():
+    print("-----> entra")
     data = request.get_json(force=True)
+    print("-----> {}".format(data))
     sup = data.get('supC')
+    print("-----> {}".format(sup))
     sql = "delete from camisetas WHERE (Nombre = '{}');".format(sup)
     cur.execute(sql)
+    print("-----> Query exed")
     return "Camiseta eliminada"
 
 if __name__  == "__main__":

@@ -52,8 +52,8 @@ def borrar():
     print("-----> {}".format(data))
     sup = data.get('supC')
     print("-----> {}".format(sup))
-    # sql = "delete from camisetas where (Nombre = '{}');".format(sup)
-    sql = "delete from camisetas where (Nombre = 'My Live');"
+    sql = "delete from camisetas where (Nombre = '{}');".format(sup)
+    # sql = "delete from camisetas where (Nombre = 'My Live');"
     cur.execute(sql)
     cnx.commit()
     print("-----> Query exed")

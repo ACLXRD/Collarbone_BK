@@ -23,6 +23,7 @@ def productos():
     sql = "select * from camisetas;"
     cur.execute(sql)
     camisetas = cur.fetchall()
+    cnx.commit()
     print(camisetas)
     listac = list()
     if camisetas:
@@ -36,6 +37,7 @@ def productos():
             listac.append(camiseta)
         return jsonify(data=listac)
     return "Fallo en consulta"
+    
 
 @app.route('/CrearC', methods=['POST'])
 def crear():

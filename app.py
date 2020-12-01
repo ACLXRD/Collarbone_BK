@@ -55,6 +55,7 @@ def borrar():
     # sql = "delete from camisetas where (Nombre = '{}');".format(sup)
     sql = "delete from camisetas where (Nombre = 'My Live');"
     cur.execute(sql)
+    cnx.commit()
     print("-----> Query exed")
     return "Camiseta eliminada"
 

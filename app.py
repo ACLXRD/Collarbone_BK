@@ -52,7 +52,8 @@ def borrar():
     print("-----> {}".format(data))
     sup = data.get('supC')
     print("-----> {}".format(sup))
-    sql = "delete from camisetas WHERE (Nombre = '{}');".format(sup)
+    # sql = "delete from camisetas where (Nombre = '{}');".format(sup)
+    sql = "delete from camisetas where (Nombre = 'My Live');"
     cur.execute(sql)
     print("-----> Query exed")
     return "Camiseta eliminada"

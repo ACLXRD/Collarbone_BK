@@ -46,14 +46,10 @@ def actualizar():
 
 @app.route('/BorrarC', methods=['DELETE'])
 def borrar():
-    print("-----> entra")
     data = request.get_json(force=True)
-    print("-----> {}".format(data))
     sup = data.get('supC')
-    print("-----> {}".format(sup))
     sql = "delete from camisetas WHERE (Nombre = '{}');".format(sup)
     cur.execute(sql)
-    print("-----> Query exed")
     return "Camiseta eliminada"
 
 if __name__  == "__main__":

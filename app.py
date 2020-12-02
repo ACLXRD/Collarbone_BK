@@ -17,7 +17,7 @@ CORS(app, resources={r'/*': {'origins': '*'}})
 @app.route('/')
 def hellos():
     return "hello"
-
+# Se obtiene la tabla camisetas dela BD y se envia al front
 @app.route('/BuscarC', methods=['GET'])
 def productos(): 
     sql = "select * from camisetas;"
@@ -47,6 +47,7 @@ def crear():
 def actualizar():
     return "Actualizando producto"
 
+#LLega el nombre de la camiseta a elimianr.
 @app.route('/BorrarC', methods=['DELETE'])
 def borrar():
     print("-----> entra")
@@ -55,7 +56,6 @@ def borrar():
     sup = data.get('supC')
     print("-----> {}".format(sup))
     sql = "delete from camisetas where (Nombre = '{}');".format(sup)
-    # sql = "delete from camisetas where (Nombre = 'My Live');"
     cur.execute(sql)
     cnx.commit()
     print("-----> Query exed")
